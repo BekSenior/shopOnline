@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shoponline/scr/card_screen.dart';
-import 'package:shoponline/scr/detail_screen.dart';
 import 'package:shoponline/scr/error_screen.dart';
-import 'package:shoponline/scr/home_screen.dart';
+import 'package:shoponline/scr/product_page.dart';
+import 'package:shoponline/scr/welcome.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -11,11 +10,11 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/home',
+      initialRoute: '/welcome',
       routes: {
-        '/home'  :  (context) => HomeScreen(),
-        '/detail':  (context) => DetailScreen(),
-        '/card'  :  (context) => CardScreen(),
+        '/welcome':(context)=>Welcome(),
+        '/home'  :  (context) => ProductPage(),
+
       },
       onUnknownRoute: (routeSetting){
         return MaterialPageRoute(builder: (_){
