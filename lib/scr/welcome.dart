@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shoponline/core/theme/AppSize.dart';
+import 'package:shoponline/core/theme/app_colors.dart';
+import 'package:shoponline/scr/widgets/go_button.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
@@ -23,7 +26,7 @@ class _WelcomeState extends State<Welcome> {
         child: DecoratedBox(
           decoration: BoxDecoration(color: Colors.black87),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 80),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 80),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -36,7 +39,7 @@ class _WelcomeState extends State<Welcome> {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                SizedBox(height: 50),
+                AppSize.height50,
                 Text(
                   textAlign: TextAlign.center,
 
@@ -44,40 +47,25 @@ class _WelcomeState extends State<Welcome> {
                   style: TextStyle(
                     letterSpacing: 4,
                     fontSize: 25,
-                    color: Colors.white,
+                    color: AppColors.white,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
-                SizedBox(height: 10),
-
+                AppSize.height10,
                 Text(
                   textAlign: TextAlign.center,
                   'Experience a new way of shopping',
                   style: TextStyle(
                     letterSpacing: 4,
                     fontSize: 18,
-                    color: Colors.white,
+                    color: AppColors.white,
                     fontWeight: FontWeight.w300,
                   ),
                 ),
                 Spacer(),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 24, 91, 220),
-                    minimumSize: Size(double.infinity, 48),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadiusGeometry.circular(5),
-                    ),
-                  ),
-                  onPressed: () {},
-                  child: Text(
-                    'Explore',
-                    style: TextStyle(
-                      letterSpacing: 4,
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
-                  ),
+                GoButton(
+                  title: 'Explore',
+                  onPressed: () => Navigator.pushNamed(context, '/signIn'),
                 ),
               ],
             ),
