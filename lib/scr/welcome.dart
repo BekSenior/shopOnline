@@ -52,21 +52,12 @@ class _WelcomeState extends State<Welcome> {
                   ),
                 ),
                 AppSize.height10,
-                Text(
-                  textAlign: TextAlign.center,
-                  'Experience a new way of shopping',
-                  style: TextStyle(
-                    letterSpacing: 4,
-                    fontSize: 18,
-                    color: AppColors.white,
-                    fontWeight: FontWeight.w300,
-                  ),
-                ),
                 Spacer(),
                 GoButton(
                   title: 'Explore',
                   onPressed: () => Navigator.pushNamed(context, '/signIn'),
                 ),
+
               ],
             ),
           ),

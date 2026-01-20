@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 class AppSize{
   AppSize._();
+  static const SizedBox height40 = SizedBox(height: 40);
   static const SizedBox height50 = SizedBox(height: 50);
   static const SizedBox height60 = SizedBox(height: 60);
   static const SizedBox height70 = SizedBox(height: 70);

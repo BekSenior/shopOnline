@@ -17,7 +17,7 @@ class _SignInState extends State<SignIn> {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -63,18 +63,31 @@ class _SignInState extends State<SignIn> {
               ),
             ),
             AppSize.height10,
-            GoButton(title: 'Sign In', onPressed: (){}),
-            AppSize.height50,
+            GoButton(title: 'Sign In', onPressed: () {}),
+            AppSize.height10,
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: AppColors.background,
+                minimumSize: const Size(double.infinity, 48),
+                shape: RoundedRectangleBorder(
+                  side: BorderSide(width: 2, color: AppColors.blue),
+                  borderRadius: BorderRadius.circular(5),
+                ),
+              ),
+              onPressed: () {},
+              child: Text(
+                'Sign in with Google',
+                style: TextStyle(color: AppColors.blue),
+              ),
+            ),
+            AppSize.height40,
             Center(
               child: RichText(
                 text: TextSpan(
                   children: [
                     TextSpan(
                       text: "Don't have an account? ",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 16,
-                      ),
+                      style: TextStyle(color: Colors.black, fontSize: 16),
                     ),
                     TextSpan(
                       text: "Sign Up",
@@ -83,15 +96,30 @@ class _SignInState extends State<SignIn> {
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                       ),
-                      recognizer: TapGestureRecognizer()
-                        ..onTap = () {
-                        },
+                      recognizer: TapGestureRecognizer()..onTap = () {
+                        Navigator.pushNamed(context, '/signUp');
+                      },
                     ),
                   ],
                 ),
               ),
-            )
+            ),
+
           ],
+        ),
+      ),
+      floatingActionButton: GestureDetector(
+        onTap: (){},
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 25,horizontal: 20),
+          child: Text(
+            'Forget password',
+            style: TextStyle(
+              fontSize: 16,
+              color: AppColors.blue,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
         ),
       ),
     );
