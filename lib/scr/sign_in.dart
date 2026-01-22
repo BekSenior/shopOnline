@@ -63,7 +63,9 @@ class _SignInState extends State<SignIn> {
               ),
             ),
             AppSize.height10,
-            GoButton(title: 'Sign In', onPressed: () {}),
+            GoButton(title: 'Sign In', onPressed: () {
+              Navigator.pushNamed(context, '/productPage');
+            }),
             AppSize.height10,
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -109,7 +111,7 @@ class _SignInState extends State<SignIn> {
         ),
       ),
       floatingActionButton: GestureDetector(
-        onTap: (){},
+        onTap: ()=>Navigator.pushNamed(context, '/forget'),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 25,horizontal: 20),
           child: Text(

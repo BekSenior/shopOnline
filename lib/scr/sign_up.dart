@@ -66,6 +66,7 @@ class _SignUpState extends State<SignUp> {
                       ),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
+                        Navigator.pop(context);
                         },
                     ),
                   ],
