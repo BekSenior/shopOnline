@@ -5,7 +5,7 @@ import 'package:shoponline/scr/password/email_password.dart';
 import 'package:shoponline/scr/password/new_password.dart';
 import 'package:shoponline/scr/password/password_reset.dart';
 import 'package:shoponline/scr/password/success.dart';
-import 'package:shoponline/scr/product_page.dart';
+import 'package:shoponline/scr/products/product_page.dart';
 import 'package:shoponline/scr/sign_in.dart';
 import 'package:shoponline/scr/sign_up.dart';
 import 'package:shoponline/scr/welcome.dart';
