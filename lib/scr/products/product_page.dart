@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shoponline/core/theme/app_colors.dart';
 import 'package:shoponline/scr/products/product_details_page.dart';
-
 import '../models/product.dart';
 
 class ProductPage extends StatefulWidget {
@@ -13,6 +12,12 @@ class ProductPage extends StatefulWidget {
 
 class _ProductPageState extends State<ProductPage> {
   final List<Product> products = [
+    Product(
+      name: 'iPhone 17 Pro',
+      price: 1100,
+      image: 'assets/image/iPhone.png',
+      color: Colors.indigo.shade50,
+    ),
     Product(
       name: 'Washing machine',
       price: 500,
@@ -91,9 +96,8 @@ class _ProductPageState extends State<ProductPage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ProductDetailsPage(
-                            product: product,
-                        ),
+                        builder: (context) =>
+                            ProductDetailsPage(product: product),
                       ),
                     );
                   },
@@ -110,8 +114,8 @@ class _ProductPageState extends State<ProductPage> {
                           child: Center(
                             child: Image.asset(
                               product.image,
-                              width: 100,
-                              height: 100,
+                              width: 150,
+                              height: 150,
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -124,7 +128,6 @@ class _ProductPageState extends State<ProductPage> {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        const SizedBox(height: 4),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [

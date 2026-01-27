@@ -19,9 +19,8 @@ class GoButton extends StatelessWidget {
       child: Text(
         title,
         style: const TextStyle(
-          letterSpacing: 4,
           color: AppColors.white,
-          fontSize: 18,
+          fontSize: 14,
         ),
       ),
     );

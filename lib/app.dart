@@ -30,7 +30,6 @@ class App extends StatelessWidget {
         '/newPassword':(context)=>NewPassword(),
         '/success':(context)=>Success(),
         '/productPage'  :  (context) => ProductPage(),
-
       },
       onUnknownRoute: (routeSetting){
         return MaterialPageRoute(builder: (_){
