@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:shoponline/core/theme/AppSize.dart';
+import 'package:shoponline/core/theme/app_size.dart';
 import 'package:shoponline/core/theme/app_colors.dart';
 import 'package:shoponline/scr/widgets/go_button.dart';
 

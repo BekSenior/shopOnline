@@ -62,6 +62,7 @@ class _ProductPageState extends State<ProductPage> {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.transparent,
           automaticallyImplyLeading: false,
           bottom: TabBar(
             indicatorColor: AppColors.blue,

@@ -56,7 +56,6 @@ class ReviewsPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
 
-                  // Rating stars
                   Row(
                     children: List.generate(
                       5,

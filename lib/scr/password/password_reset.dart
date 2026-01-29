@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/theme/AppSize.dart';
+import '../../core/theme/app_size.dart';
 import '../../core/theme/app_colors.dart';
 import '../widgets/go_button.dart';
 class PasswordReset extends StatelessWidget {

@@ -4,7 +4,7 @@ import 'package:shoponline/core/theme/app_colors.dart';
 import 'package:shoponline/scr/widgets/go_button.dart';
 import 'package:shoponline/scr/widgets/text_field_widget.dart';
 
-import '../core/theme/AppSize.dart';
+import '../core/theme/app_size.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
